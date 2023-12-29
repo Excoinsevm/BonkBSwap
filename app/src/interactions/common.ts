@@ -8,13 +8,13 @@ import { PublicKey } from "@solana/web3.js";
 
 export const getBasicAccounts = () => {
   const poolWsol = new PublicKey(process.env.NEXT_PUBLIC_POOL_WSOL || "");
-  const poolMacro = new PublicKey(process.env.NEXT_PUBLIC_POOL_MACRO || "");
+  const poolBonkb = new PublicKey(process.env.NEXT_PUBLIC_POOL_BONKB || "");
   const poolOwner = new PublicKey(process.env.NEXT_PUBLIC_POOL_OWNER || "");
-  const macroswapAccount = new PublicKey(process.env.NEXT_PUBLIC_MACROSWAP_ACCOUNT || "");
-  const macroMint = new PublicKey(process.env.NEXT_PUBLIC_MACRO_MINT || "");
+  const bonkbswapAccount = new PublicKey(process.env.NEXT_PUBLIC_BONKBSWAP_ACCOUNT || "");
+  const bonkbMint = new PublicKey(process.env.NEXT_PUBLIC_BONKB_MINT || "");
 
   return {
-    poolMacro, poolWsol, poolOwner, macroswapAccount, macroMint
+    poolBonkb, poolWsol, poolOwner, bonkbswapAccount, bonkbMint
   }
 }
 
