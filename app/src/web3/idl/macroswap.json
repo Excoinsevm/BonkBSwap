@@ -1,6 +1,6 @@
 {
   "version": "0.0.0",
-  "name": "macroswap",
+  "name": "bonkbswap",
   "instructions": [
     {
       "name": "initialize",
@@ -11,12 +11,12 @@
           "isSigner": true
         },
         {
-          "name": "macroMint",
+          "name": "bonkbMint",
           "isMut": false,
           "isSigner": false
         },
         {
-          "name": "poolMacro",
+          "name": "poolBonkb",
           "isMut": true,
           "isSigner": false
         },
@@ -31,7 +31,7 @@
           "isSigner": false
         },
         {
-          "name": "macroswapAccount",
+          "name": "bonkbswapAccount",
           "isMut": true,
           "isSigner": true
         },
@@ -83,7 +83,7 @@
           "isSigner": false
         },
         {
-          "name": "userMacro",
+          "name": "userBonkb",
           "isMut": true,
           "isSigner": false
         },
@@ -93,12 +93,12 @@
           "isSigner": false
         },
         {
-          "name": "poolMacro",
+          "name": "poolBonkb",
           "isMut": true,
           "isSigner": false
         },
         {
-          "name": "macroswapAccount",
+          "name": "bonkbswapAccount",
           "isMut": false,
           "isSigner": false
         },
@@ -139,7 +139,7 @@
           "isSigner": false
         },
         {
-          "name": "userMacro",
+          "name": "userBonkb",
           "isMut": true,
           "isSigner": false
         },
@@ -149,12 +149,12 @@
           "isSigner": false
         },
         {
-          "name": "poolMacro",
+          "name": "poolBonkb",
           "isMut": true,
           "isSigner": false
         },
         {
-          "name": "macroswapAccount",
+          "name": "bonkbswapAccount",
           "isMut": false,
           "isSigner": false
         },
@@ -190,7 +190,7 @@
           "isSigner": true
         },
         {
-          "name": "macroswapAccount",
+          "name": "bonkbswapAccount",
           "isMut": true,
           "isSigner": false
         }
@@ -205,7 +205,7 @@
   ],
   "accounts": [
     {
-      "name": "MacroSwapAccount",
+      "name": "BonkSwapAccount",
       "type": {
         "kind": "struct",
         "fields": [
@@ -224,7 +224,7 @@
             }
           },
           {
-            "name": "macroMint",
+            "name": "bonkbMint",
             "type": "publicKey"
           },
           {
@@ -232,7 +232,7 @@
             "type": "publicKey"
           },
           {
-            "name": "poolMacro",
+            "name": "poolBonkb",
             "type": "publicKey"
           },
           {
@@ -254,7 +254,7 @@
         "kind": "struct",
         "fields": [
           {
-            "name": "poolMacro",
+            "name": "poolBonkb",
             "type": "u8"
           },
           {
@@ -310,10 +310,10 @@
     {
       "code": 301,
       "name": "LowMacro",
-      "msg": "Insufficient Macro tokens"
+      "msg": "Insufficient Bonkb tokens"
     }
   ],
   "metadata": {
-    "address": "BgmP6WcB2xDiSAghqxRxqKDFxxEL3fBDykZLwyL5vroy"
+    "address": "2no1kkzJDQbCn1Rct3bzpi1Ud4fW9f1RJvHoZ2Q1epN2"
   }
 }
