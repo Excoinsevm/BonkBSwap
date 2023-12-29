@@ -3,7 +3,7 @@ import { AnchorWallet } from "@solana/wallet-adapter-react";
 import { ConfirmOptions, Connection } from "@solana/web3.js";
 import { PublicKey } from "@solana/web3.js";
 // import { IDL } from "./idl/macroswap";
-import idl from "./idl/macroswap.json";
+import idl from "./idl/bonkbswap.json";
 
 export const getProvider = (anchorWallet: AnchorWallet, connection: Connection): Provider => {
   const opts: ConfirmOptions = {
