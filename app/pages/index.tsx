@@ -7,8 +7,8 @@ const Home: React.FC = () => {
   return (
     <>
       <Head>
-        <title>MacroSwap</title>
-        <meta name="description" content="World leading token exchange!" />
+        <title>BonkbSwap</title>
+        <meta name="description" content="Solana's leading token exchange!" />
         <link rel="icon§" href="/favicon.ico" />
       </Head>
 
