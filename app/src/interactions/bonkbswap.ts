@@ -7,9 +7,9 @@ import { accountExists, createATA, getATA, getBasicAccounts } from "./common";
 import { unwrapTx, wrapTx } from "./sol";
 
 export const getRate = async (provider: Provider): Promise<number> => {
-  const { macroswapAccount } = getBasicAccounts();
+  const { bonkbswapAccount } = getBasicAccounts();
   const program = getProgram(provider);
-  const data = await program.account.macroSwapAccount.fetch(macroswapAccount);
+  const data = await program.account.bonkbSwapAccount.fetch(bonkbswapAccount);
   const rate = data.rate.toNumber();
   return rate;
 };
@@ -20,17 +20,17 @@ export const buyTokenTx = async (
   amount: number
 ): Promise<Transaction> => {
   const { wallet } = provider;
-  const { macroMint, poolMacro, poolWsol, poolOwner, macroswapAccount } =
+  const { bonkbMint, poolBonkb, poolWsol, poolOwner, bonkbswapAccount } =
     getBasicAccounts();
 
   const program = getProgram(provider);
   const userWsol = await getATA(wallet.publicKey, NATIVE_MINT);
-  const userMacro = await getATA(wallet.publicKey, macroMint);
+  const userBonkb = await getATA(wallet.publicKey, bonkbMint);
 
   const tx = new web3.Transaction();
 
-  if (!(await accountExists(provider, userMacro))) {
-    tx.add(await createATA(wallet.publicKey, macroMint));
+  if (!(await accountExists(provider, userBonkb))) {
+    tx.add(await createATA(wallet.publicKey, bonkbMint));
   }
 
   tx.add(await wrapTx(provider, wallet.publicKey, value * 10 ** 9));
@@ -40,11 +40,11 @@ export const buyTokenTx = async (
       accounts: {
         user: wallet.publicKey,
         userWsol,
-        userMacro,
+        userBonkb,
         poolWsol,
-        poolMacro,
+        poolBonkb,
         poolOwner,
-        macroswapAccount,
+        bonkbswapAccount,
         systemProgram: SystemProgram.programId,
         tokenProgram: TOKEN_PROGRAM_ID,
       },
@@ -61,12 +61,12 @@ export const sellTokenTx = async (
   amount: number
 ): Promise<Transaction> => {
   const { wallet } = provider;
-  const { macroMint, poolMacro, poolWsol, poolOwner, macroswapAccount } =
+  const { bonkbMint, poolBonkb, poolWsol, poolOwner, bonkbswapAccount } =
     getBasicAccounts();
 
   const program = getProgram(provider);
   const userWsol = await getATA(wallet.publicKey, NATIVE_MINT);
-  const userMacro = await getATA(wallet.publicKey, macroMint);
+  const userBonkb = await getATA(wallet.publicKey, bonkbMint);
 
   const tx = new web3.Transaction();
 
@@ -79,11 +79,11 @@ export const sellTokenTx = async (
       accounts: {
         user: wallet.publicKey,
         userWsol,
-        userMacro,
+        userBonkb,
         poolWsol,
-        poolMacro,
+        poolBonkb,
         poolOwner,
-        macroswapAccount,
+        bonkbswapAccount,
         systemProgram: SystemProgram.programId,
         tokenProgram: TOKEN_PROGRAM_ID,
       },
