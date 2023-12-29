@@ -20,7 +20,7 @@ const RateBox: React.FC<IProps> = ({ onClickReload, rate }) => {
             />
           </span>
           <span className={styles.rateValue}>
-            1 SOL = {rate} MACRO
+            1 SOL = {rate} BONKB
           </span>
         </>
     </div>
