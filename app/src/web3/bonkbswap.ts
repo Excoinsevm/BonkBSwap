@@ -1,4 +1,4 @@
-export type Macroswap = {
+export type Macrswap = {
   "version": "0.0.0",
   "name": "bonkbswap",
   "instructions": [
