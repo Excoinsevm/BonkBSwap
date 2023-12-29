@@ -8,18 +8,18 @@ export const getMacroBalance = async (
   provider: anchor.Provider,
   user: PublicKey
 ): Promise<u64> => {
-  const macroMint = new PublicKey(process.env.NEXT_PUBLIC_MACRO_MINT || "");
-  const userMacroAddr = await getATA(user, macroMint);
+  const bonkbMint = new PublicKey(process.env.NEXT_PUBLIC_BONKB_MINT || "");
+  const userBonkbAddr = await getATA(user, bonkbMint);
   let balance: u64;
 
-  if(await accountExists(provider, userMacroAddr)){
-    const tokenAccount = await getTokenAccount(provider, userMacroAddr);
+  if(await accountExists(provider, userBonkbAddr)){
+    const tokenAccount = await getTokenAccount(provider, userBonkbAddr);
     balance = tokenAccount.amount;
   }else{
     balance = new u64(0);
   }
 
-  console.log("Macro balance: " + balance.toNumber());
+  console.log("Bonkb balance: " + balance.toNumber());
 
   return balance;
 };
