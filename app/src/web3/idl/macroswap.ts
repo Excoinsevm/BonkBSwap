@@ -1,6 +1,6 @@
 export type Macroswap = {
   "version": "0.0.0",
-  "name": "macroswap",
+  "name": "bonkbswap",
   "instructions": [
     {
       "name": "initialize",
@@ -11,12 +11,12 @@ export type Macroswap = {
           "isSigner": true
         },
         {
-          "name": "macroMint",
+          "name": "bonkbMint",
           "isMut": false,
           "isSigner": false
         },
         {
-          "name": "poolMacro",
+          "name": "poolBonkb",
           "isMut": true,
           "isSigner": false
         },
@@ -31,7 +31,7 @@ export type Macroswap = {
           "isSigner": false
         },
         {
-          "name": "macroswapAccount",
+          "name": "bonkbswapAccount",
           "isMut": true,
           "isSigner": true
         },
@@ -83,7 +83,7 @@ export type Macroswap = {
           "isSigner": false
         },
         {
-          "name": "userMacro",
+          "name": "userBonkb",
           "isMut": true,
           "isSigner": false
         },
@@ -93,12 +93,12 @@ export type Macroswap = {
           "isSigner": false
         },
         {
-          "name": "poolMacro",
+          "name": "poolBonkb",
           "isMut": true,
           "isSigner": false
         },
         {
-          "name": "macroswapAccount",
+          "name": "bonkbswapAccount",
           "isMut": false,
           "isSigner": false
         },
@@ -139,7 +139,7 @@ export type Macroswap = {
           "isSigner": false
         },
         {
-          "name": "userMacro",
+          "name": "userBonkb",
           "isMut": true,
           "isSigner": false
         },
@@ -149,12 +149,12 @@ export type Macroswap = {
           "isSigner": false
         },
         {
-          "name": "poolMacro",
+          "name": "poolBonkb",
           "isMut": true,
           "isSigner": false
         },
         {
-          "name": "macroswapAccount",
+          "name": "bonkbswapAccount",
           "isMut": false,
           "isSigner": false
         },
@@ -190,7 +190,7 @@ export type Macroswap = {
           "isSigner": true
         },
         {
-          "name": "macroswapAccount",
+          "name": "bonkbswapAccount",
           "isMut": true,
           "isSigner": false
         }
@@ -205,7 +205,7 @@ export type Macroswap = {
   ],
   "accounts": [
     {
-      "name": "macroSwapAccount",
+      "name": "bonkbSwapAccount",
       "type": {
         "kind": "struct",
         "fields": [
@@ -224,7 +224,7 @@ export type Macroswap = {
             }
           },
           {
-            "name": "macroMint",
+            "name": "bonkbMint",
             "type": "publicKey"
           },
           {
@@ -232,7 +232,7 @@ export type Macroswap = {
             "type": "publicKey"
           },
           {
-            "name": "poolMacro",
+            "name": "poolBonkb",
             "type": "publicKey"
           },
           {
@@ -254,7 +254,7 @@ export type Macroswap = {
         "kind": "struct",
         "fields": [
           {
-            "name": "poolMacro",
+            "name": "poolBonkb",
             "type": "u8"
           },
           {
@@ -310,14 +310,14 @@ export type Macroswap = {
     {
       "code": 301,
       "name": "LowMacro",
-      "msg": "Insufficient Macro tokens"
+      "msg": "Insufficient Bonkb tokens"
     }
   ]
 };
 
-export const IDL: Macroswap = {
+export const IDL: Bonkbswap = {
   "version": "0.0.0",
-  "name": "macroswap",
+  "name": "bonkbswap",
   "instructions": [
     {
       "name": "initialize",
@@ -328,12 +328,12 @@ export const IDL: Macroswap = {
           "isSigner": true
         },
         {
-          "name": "macroMint",
+          "name": "bonkbMint",
           "isMut": false,
           "isSigner": false
         },
         {
-          "name": "poolMacro",
+          "name": "poolBonkb",
           "isMut": true,
           "isSigner": false
         },
@@ -348,7 +348,7 @@ export const IDL: Macroswap = {
           "isSigner": false
         },
         {
-          "name": "macroswapAccount",
+          "name": "bonkbswapAccount",
           "isMut": true,
           "isSigner": true
         },
@@ -400,7 +400,7 @@ export const IDL: Macroswap = {
           "isSigner": false
         },
         {
-          "name": "userMacro",
+          "name": "userBonkb",
           "isMut": true,
           "isSigner": false
         },
@@ -410,12 +410,12 @@ export const IDL: Macroswap = {
           "isSigner": false
         },
         {
-          "name": "poolMacro",
+          "name": "poolBonkb",
           "isMut": true,
           "isSigner": false
         },
         {
-          "name": "macroswapAccount",
+          "name": "bonkbSwapAccount",
           "isMut": false,
           "isSigner": false
         },
@@ -456,7 +456,7 @@ export const IDL: Macroswap = {
           "isSigner": false
         },
         {
-          "name": "userMacro",
+          "name": "userBonkb",
           "isMut": true,
           "isSigner": false
         },
@@ -466,12 +466,12 @@ export const IDL: Macroswap = {
           "isSigner": false
         },
         {
-          "name": "poolMacro",
+          "name": "poolBonkb",
           "isMut": true,
           "isSigner": false
         },
         {
-          "name": "macroswapAccount",
+          "name": "BonkbswapAccount",
           "isMut": false,
           "isSigner": false
         },
@@ -507,7 +507,7 @@ export const IDL: Macroswap = {
           "isSigner": true
         },
         {
-          "name": "macroswapAccount",
+          "name": "BonkbSwapAccount",
           "isMut": true,
           "isSigner": false
         }
@@ -522,7 +522,7 @@ export const IDL: Macroswap = {
   ],
   "accounts": [
     {
-      "name": "macroSwapAccount",
+      "name": "bonkbSwapAccount",
       "type": {
         "kind": "struct",
         "fields": [
@@ -541,7 +541,7 @@ export const IDL: Macroswap = {
             }
           },
           {
-            "name": "macroMint",
+            "name": "bonkbMint",
             "type": "publicKey"
           },
           {
@@ -549,7 +549,7 @@ export const IDL: Macroswap = {
             "type": "publicKey"
           },
           {
-            "name": "poolMacro",
+            "name": "poolBonkb",
             "type": "publicKey"
           },
           {
@@ -571,7 +571,7 @@ export const IDL: Macroswap = {
         "kind": "struct",
         "fields": [
           {
-            "name": "poolMacro",
+            "name": "poolBonkb",
             "type": "u8"
           },
           {
@@ -626,8 +626,8 @@ export const IDL: Macroswap = {
     },
     {
       "code": 301,
-      "name": "LowMacro",
-      "msg": "Insufficient Macro tokens"
+      "name": "LowBonkb",
+      "msg": "Insufficient Bonkb tokens"
     }
   ]
 };
